@@ -1,6 +1,6 @@
-#Multiplot in png/static mode must be initialized with
-#reset. Otherwise, it execution will run only once and 
-#only first plot will be written.
+# Multiplot in PNG/static mode must be initialized with
+# reset. Otherwise, the script will execute only once, and
+# only the first plot will be written.
 
 reset
 
