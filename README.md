@@ -76,7 +76,7 @@ The following tools, components, and modules are required to compile GnuplotIDE:
  
 #### Precompiled Binary
 
-A precompiled Linux binary is available on the Releases page.
+A precompiled Linux binary is available on the [Releases page](https://github.com/DiscoCat-Dev/GnuplotIDE/releases).
 
 The binary was compiled using Lazarus 4.8 with the Qt 5 widget set on Fedora Linux 43, with Gnuplot 6.0.3 used for testing.
 
