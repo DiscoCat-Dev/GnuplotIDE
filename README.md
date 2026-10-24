@@ -183,9 +183,9 @@ If GnuplotIDE is to be used as the default application for opening `.plt` or `.g
 
 Using GnuplotIDE is straightforward. GnuplotIDE supports three plotting modes. The preview panel contains two tabs: one for static plots and another for interactive plots.
 
-- ![static mode](Icons/plot_static.png)  — Displays a static plot in PNG format (F5). 
-- ![interactive mode](Icons/plot_x11.png)  — Displays an interactive X11-based plot that supports mouse and keyboard interaction (F6).
-- ![external plot](Icons/plot_external.png)  — Opens the plot in Gnuplot's native external Qt window (F7).
+- ![static mode](ReadMe-Icons/plot_static.png)  — Displays a static plot in PNG format (F5). 
+- ![interactive mode](ReadMe-Icons/plot_x11.png)  — Displays an interactive X11-based plot that supports mouse and keyboard interaction (F6).
+- ![external plot](ReadMe-Icons/plot_external.png)  — Opens the plot in Gnuplot's native external Qt window (F7).
 
 #### Hello World!
 
@@ -331,6 +331,10 @@ The Qt terminal cannot be embedded into GnuplotIDE because its plotting area can
 
 GnuplotIDE provides appearance settings for customizing the editor's background color, fonts, and Gnuplot syntax highlighting colors, as well as the Message Window's background color, text color, and fonts. However, it does not provide a dedicated application-wide theming system. The overall appearance of the application depends on the Qt 5 theme configured on the user's system. On Linux, tools such as `qt5ct` can be used to customize the appearance of Qt 5 applications.
 
+**Note on Icon Visibility:** GnuplotIDE uses white [Tabler Icons](https://github.com/tabler), which may be difficult to see against white or light-grey backgrounds. A dark desktop theme is recommended for better icon visibility. 
+
+Alternatively, users who compile GnuplotIDE from source can replace the original icons with the dark-grey versions provided in `ReadMe-Icons` folder, which are intended for lighter desktop themes. The distributed binary retains the original white icons.
+
 6. ### Miscellaneous
 
 GnuplotIDE is an independently developed project, created out of a desire to build a practical working environment for Gnuplot. It is not intended to be a perfect, all-encompassing solution or a replacement for other text editors and IDEs.
@@ -362,13 +366,13 @@ In addition to these messages, numerical values such as 0 and 1 may appear. Thes
 
 This panel contains the application's main command buttons. In addition to the plotting commands described above (Static Plot, Interactive Plot, and External Plot), it includes the following buttons:
 
-- ![stop gnuplot](Icons/plot_stop.png)  — Sends a stop command to Gnuplot (F8).
-- ![show plots list](Icons/plot_list.png)  — Displays the names of the last ten plots.
-- ![save static plot](Icons/plot_save.png)  — Saves the static plot.
-- ![clear messages](Icons/message_clear.png)  — Clears the message window.
-- ![clear static plot](Icons/plot_clear.png) — Clears the static plot preview.
-- ![show last static plot](Icons/plot_last.png)  — Displays the most recently generated static plot.
-- ![clear interactive plot](Icons/plot_inter_clear.png)  — Clears the interactive plot.
+- ![stop gnuplot](ReadMe-Icons/plot_stop.png)  — Sends a stop command to Gnuplot (F8).
+- ![show plots list](ReadMe-Icons/plot_list.png)  — Displays the names of the last ten plots.
+- ![save static plot](ReadMe-Icons/plot_save.png)  — Saves the static plot.
+- ![clear messages](ReadMe-Icons/message_clear.png)  — Clears the message window.
+- ![clear static plot](ReadMe-Icons/plot_clear.png) — Clears the static plot preview.
+- ![show last static plot](ReadMe-Icons/plot_last.png)  — Displays the most recently generated static plot.
+- ![clear interactive plot](ReadMe-Icons/plot_inter_clear.png)  — Clears the interactive plot.
 
 The plot-clearing commands can be useful when a plot is rendered incorrectly or becomes unresponsive. However, each plotting command resets the plotting configurations.
 
@@ -434,6 +438,8 @@ Developers interested in porting GnuplotIDE to Windows or macOS are encouraged t
 GnuplotIDE was developed using the Lazarus IDE and Free Pascal Compiler (FPC), with Free Pascal as its programming language.
 
 Packages such as ExtraSyn and RichMemo have become indispensable parts of the application. I am grateful to their creators and maintainers for their valuable work.
+
+The icons used in GnuplotIDE are from [Tabler Icons](https://github.com/tabler), an open-source icon library. Thanks to the Tabler team and contributors for making these icons available.
 
 Special thanks go to **Tito Hinostroza (t-edson)** and **Ronald Chastain (rchastain)**, contributors to [UnTerminal](https://github.com/t-edson/UnTerminal), for making this library available. GnuplotIDE uses the `UnTerminal.pas` and `TermVT.pas` source files from the project, which is licensed under the GNU Lesser General Public License version 2.1 (LGPL-2.1).
 
