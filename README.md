@@ -8,13 +8,42 @@
 - [Motivation](#motivation)
 - [Features](#features)
 - [Screenshots](#screenshots)
+  - [Static Plot Mode](#static-plot-mode)
+  - [Interactive Plot Mode](#interactive-plot-mode)
+  - [External Plot Mode](#external-plot-mode)
 - [Requirements and Dependencies](#requirements-and-dependencies)
+  - [Required to Run](#required-to-run)
+  - [Required to Build from Source Code](#required-to-build-from-source-code)
 - [Installation](#installation)
+  - [Precompiled Binary](#precompiled-binary)
+  - [Runtime Requirements and Compatibility](#runtime-requirements-and-compatibility)
 - [Compiling from Source](#compiling-from-source)
+  - [Important: Qt5 Widget Set Required](#important-qt5-widget-set-required)
+  - [Compilation](#compilation)
+    - [UnTerminal and TermVT](#unterminal-and-termvt)
+    - [ExtraSyn](#extrasyn)
+    - [RichMemo](#richmemo)
+    - [Note](#note)
+    - [Optional: Application Icon](#optional-application-icon)
 - [File Format and Extensions](#file-format-and-extensions)
+  - [Opening Files](#opening-files)
 - [Getting Started](#getting-started)
+  - [Hello World!](#hello-world)
+    - [Static Plot](#static-plot)
+    - [Interactive](#interactive-plot)
+    - [External Plot](#external-plot)
 - [Limitations](#limitations)
+  - [Multiple Plots in Static Mode](#multiple-plots-in-static-mode)
+  - [Multiplot in Static Mode](#multiplot-in-static-mode)
+  - [No Syntax Autocompletion](#no-syntax-autocompletion)
+  - [Interactive Plot Limitations](#interactive-plot-limitations)
+  - [Application Theming](#application-theming)
+  - [Miscellaneous](#miscellaneous)    
 - [Interface Overview](#interface-overview)
+  - [Editor](#editor)
+  - [Preview](#preview)
+  - [Message Window](#message-window)
+  - [Command Buttons](#command-buttons)
 - [Static and Interactive Plot Parameters](#static-and-interactive-plot-parameters)
 - [Plot Configurations](#plot-configurations)
 - [Logs](#logs)
@@ -50,9 +79,15 @@ The interface uses the Qt widget set through Lazarus and is designed with a spac
 
 ## Screenshots
 
+### Static Plot Mode
+
 ![GnuplotIDE's static plot](Screenshots/screenshot_static.png "GnuplotIDE static plot example")
 
+### Interactive Plot Mode
 ![GnuplotIDE's interactive plot](Screenshots/screenshot_interactive.gif "GnuplotIDE interactive plot example")
+
+### External Plot Mode
+![GnuplotIDE's external plot](Screenshots/screenshot_external.png "GnuplotIDE external plot example")
 
 ## Requirements and Dependencies
 
@@ -166,11 +201,11 @@ Unlike document formats such as Microsoft Word's `.doc` and `.docx`, Gnuplot scr
 
 By convention, GnuplotIDE uses `.plt` as its primary file extension and `.gp` as a secondary extension for Gnuplot scripts.
 
-#### Opening files 
+#### Opening Files 
 
 GnuplotIDE is primarily designed for opening files from within the application after launching it. However, it also supports opening `.plt` and `.gp` files by double-clicking them or selecting them and pressing Enter.
 
-To enable this, create a desktop entry as described in **Optional: Application Icon** under [Installation](#installation), and add `%f` to the executable path in the Exec line. For example:
+To enable this, create a desktop entry as described in [Optional: Application Icon](#optional-application-icon) under [Installation](#installation), and add `%f` to the executable path in the Exec line. For example:
 
 ```
 Exec=/path/to/executable %f
@@ -190,7 +225,7 @@ Using GnuplotIDE is straightforward. GnuplotIDE supports three plotting modes. T
 #### Hello World!
 
 To try the different plotting modes, use the following examples.
-##### Static plot
+##### Static Plot
 
 Enter the following code in the editor, then press the Static Plot button described above.
 ```Gnuplot
@@ -331,7 +366,7 @@ The Qt terminal cannot be embedded into GnuplotIDE because its plotting area can
 
 GnuplotIDE provides appearance settings for customizing the editor's background color, fonts, and Gnuplot syntax highlighting colors, as well as the Message Window's background color, text color, and fonts. However, it does not provide a dedicated application-wide theming system. The overall appearance of the application depends on the Qt 5 theme configured on the user's system. On Linux, tools such as `qt5ct` can be used to customize the appearance of Qt 5 applications.
 
-**Note on Icon Visibility:** GnuplotIDE uses white [Tabler Icons](https://github.com/tabler), which may be difficult to see against white or light-grey backgrounds. A dark desktop theme is recommended for better icon visibility. 
+**Note on Icon Visibility:** GnuplotIDE was designed specifically for use in a dark-theme environment, which is why it uses white [Tabler Icons](https://github.com/tabler). A dark desktop theme is recommended for better icon visibility. Users who compile GnuplotIDE from source can alternatively replace the original icons with the dark-grey versions provided in `ReadMe-Icons` for use with light desktop themes.
 
 Alternatively, users who compile GnuplotIDE from source can replace the original icons with the dark-grey versions provided in `ReadMe-Icons` folder, which are intended for lighter desktop themes. The distributed binary retains the original white icons.
 
