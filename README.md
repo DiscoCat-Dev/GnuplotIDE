@@ -366,7 +366,7 @@ The Qt terminal cannot be embedded into GnuplotIDE because its plotting area can
 
 GnuplotIDE provides appearance settings for customizing the editor's background color, fonts, and Gnuplot syntax highlighting colors, as well as the Message Window's background color, text color, and fonts. However, it does not provide a dedicated application-wide theming system. The overall appearance of the application depends on the Qt 5 theme configured on the user's system. On Linux, tools such as `qt5ct` can be used to customize the appearance of Qt 5 applications.
 
-**Note on Icon Visibility:** GnuplotIDE was designed specifically for use in a dark-theme environment, which is why it uses white [Tabler Icons](https://github.com/tabler). A dark desktop theme is recommended for better icon visibility. Users who compile GnuplotIDE from source can alternatively replace the original icons with the dark-grey versions provided in `ReadMe-Icons` for use with light desktop themes.
+**Note on Icon Visibility:** GnuplotIDE was designed specifically for use in a dark-theme environment, which is why it uses white [Tabler Icons](https://github.com/tabler). A dark desktop theme is recommended for better icon visibility. 
 
 Alternatively, users who compile GnuplotIDE from source can replace the original icons with the dark-grey versions provided in `ReadMe-Icons` folder, which are intended for lighter desktop themes. The distributed binary retains the original white icons.
 
