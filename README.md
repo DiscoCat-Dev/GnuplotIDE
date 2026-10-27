@@ -79,14 +79,14 @@ The interface uses the Qt widget set through Lazarus and is designed with a spac
 
 ## Screenshots
 
-### Static Plot Mode
+#### Static Plot Mode
 
 ![GnuplotIDE's static plot](Screenshots/screenshot_static.png "GnuplotIDE static plot example")
 
-### Interactive Plot Mode
+#### Interactive Plot Mode
 ![GnuplotIDE's interactive plot](Screenshots/screenshot_interactive.gif "GnuplotIDE interactive plot example")
 
-### External Plot Mode
+#### External Plot Mode
 ![GnuplotIDE's external plot](Screenshots/screenshot_external.png "GnuplotIDE external plot example")
 
 ## Requirements and Dependencies
