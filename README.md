@@ -55,7 +55,7 @@
 
 GnuplotIDE is a graphical editor and IDE for Gnuplot scripts and data visualization, developed with Lazarus and Free Pascal. The project is intended for researchers, academics, and students who use Gnuplot for data visualization.
 
-GnuplotIDE is not affiliated with or endorsed by the Gnuplot developers or the GNU Project.
+GnuplotIDE is an independent project and is not affiliated with or endorsed by the Gnuplot developers or the GNU Project.
 
 ## Motivation
 
