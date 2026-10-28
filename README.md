@@ -1,5 +1,5 @@
 <p align="center">
-<img src="Logo-new/ShinPlot.png" alt="ShinPlot Logo" width="200">
+<img src="GnuplotIDE.png" alt="GnuplotIDE logo" width="200">
 </p>
 
 ## Table of Contents
@@ -53,11 +53,9 @@
 
 ## Introduction
 
-ShinPlot is a graphical editor and IDE for Gnuplot scripts and data visualization, developed with Lazarus and Free Pascal. The project is intended for researchers, academics, and students who use Gnuplot for data visualization.
+GnuplotIDE is a graphical editor and IDE for Gnuplot scripts and data visualization, developed with Lazarus and Free Pascal. The project is intended for researchers, academics, and students who use Gnuplot for data visualization.
 
-The project was originally named GnuplotIDE. It has been renamed **ShinPlot**, combining *shin* (新), the Japanese word for “new,” with “Plot,” reflecting its purpose as a graphical environment for Gnuplot. The new name also distinguishes the project more clearly as an independent application.
-
-ShinPlot is an independent project and is not affiliated with or endorsed by the Gnuplot developers or the GNU Project.
+GnuplotIDE is an independent project and is not affiliated with or endorsed by the Gnuplot developers or the GNU Project.
 
 ## Motivation
 
@@ -65,15 +63,13 @@ This project was initially developed for my own use in computational social scie
 
 Over time, the project expanded into a research-oriented IDE and editor for users who rely on Gnuplot as their primary data visualization tool. The application is lightweight, easy to use, and designed with an intuitive interface that users can understand quickly.
 
-
-
 ## Features
 
-ShinPlot is built with Object Pascal and Lazarus, using native and third-party components to provide an integrated environment for writing and executing Gnuplot scripts.
+GnuplotIDE is built with Object Pascal and Lazarus, using native and third-party components to provide an integrated environment for writing and executing Gnuplot scripts.
 
 The application uses the ExtraSyn component to provide Gnuplot syntax highlighting in the editor. It uses UnTerminal to manage Gnuplot processes and handle terminal output, while RichMemo displays output messages in the application's message window.
 
-ShinPlot supports three plotting modes:
+GnuplotIDE supports three plotting modes:
 
 - **PNG preview:** Displays plots as static PNG images within the application.
 - **Embedded X11:** Displays interactive Gnuplot plots inside the application's interface.
@@ -84,8 +80,6 @@ These modes allow users to choose how they view their plots while working with G
 The interface uses the Qt widget set through Lazarus and is designed with a spacious, uncluttered layout.
 
 ## Screenshots
-
-**Note:** Some screenshots show the application's previous name, GnuplotIDE. The project has since been renamed ShinPlot; the screenshots are retained for illustrative purposes.
 
 #### Static Plot Mode
 
@@ -101,13 +95,13 @@ The interface uses the Qt widget set through Lazarus and is designed with a spac
 
 #### Required to Run
 
-ShinPlot requires Gnuplot to execute scripts and generate plots.
+GnuplotIDE requires Gnuplot to execute scripts and generate plots.
 
 The embedded X11 plotting mode requires a graphical environment with X11 support and a Gnuplot installation that includes the X11 terminal.
 
 #### Required to Build from Source Code
 
-The following tools, components, and modules are required to compile ShinPlot:
+The following tools, components, and modules are required to compile GnuplotIDE:
 
 - Lazarus IDE and Free Pascal Compiler (FPC).
 - ExtraSyn — provides the TSynGnuplotSyn syntax highlighter used for Gnuplot scripts.
@@ -119,7 +113,7 @@ The following tools, components, and modules are required to compile ShinPlot:
  
 #### Precompiled Binary
 
-A precompiled Linux binary is available on the [Releases page](https://github.com/DiscoCat-Dev/ShinPlot/releases). After downloading the binary, you may need to enable the **Allow executing file as program** permission in the file's Properties before running it.
+A precompiled Linux binary is available on the [Releases page](https://github.com/DiscoCat-Dev/GnuplotIDE/releases). After downloading the binary, you may need to enable the **Allow executing file as program** permission in the file's Properties before running it.
 
 The binary was compiled using Lazarus 4.8 with the Qt 5 widget set on Fedora Linux 43, with Gnuplot 6.0.3 used for testing.
 
@@ -129,29 +123,29 @@ The binary depends on system libraries, including Qt 5 and the Lazarus Qt interf
 
 The binary has been tested on Fedora Linux 43. Its compatibility with other Linux distributions has not been verified. If the binary does not run on your system, check the required library dependencies and ensure that a compatible version of Gnuplot is installed.
 
-Alternatively, you can compile ShinPlot from source using the instructions provided below.
+Alternatively, you can compile GnuplotIDE from source using the instructions provided below.
 
 ## Compiling from Source
 
 ### Important: Qt5 Widget Set Required
 
-ShinPlot was developed using Lazarus 4.8 with the Qt5 widget set. Its embedded Gnuplot X11 terminal relies on Qt-specific window identification and embedding. 
+GnuplotIDE was developed using Lazarus 4.8 with the Qt5 widget set. Its embedded Gnuplot X11 terminal relies on Qt-specific window identification and embedding. 
 
 Therefore, compiling the application with another widget set, such as GTK2 or GTK3, is not recommended and may result in compilation errors or malfunctioning features.
 
-To compile ShinPlot from source, use a Lazarus environment configured for Qt5. If your existing Lazarus installation uses another widget set, configure a suitable Qt5-enabled environment before compiling.
+To compile GnuplotIDE from source, use a Lazarus environment configured for Qt5. If your existing Lazarus installation uses another widget set, configure a suitable Qt5-enabled environment before compiling.
 
 ### Compilation 
 
-Compiling ShinPlot from source requires following additional components and modules.
+Compiling GnuplotIDE from source requires following additional components and modules.
 
 #### UnTerminal and TermVT
 
-ShinPlot uses UnTerminal and TermVT for terminal and process handling. If these source files are not included in the repository, obtain `UnTerminal.pas` and `TermVT.pas` from their developer's [repository](https://github.com/t-edson/UnTerminal) and make them available to the Lazarus project.   
+GnuplotIDE uses UnTerminal and TermVT for terminal and process handling. If these source files are not included in the repository, obtain `UnTerminal.pas` and `TermVT.pas` from their developer's [repository](https://github.com/t-edson/UnTerminal) and make them available to the Lazarus project.   
 
 #### ExtraSyn
 
-ExtraSyn is a third-party Lazarus component package that provides the TSynGnuplotSyn highlighter used by ShinPlot.
+ExtraSyn is a third-party Lazarus component package that provides the TSynGnuplotSyn highlighter used by GnuplotIDE.
 
 Install ExtraSyn through Lazarus's Online Package Manager. Rebuild the Lazarus IDE if required by the installation process. After installation, the Gnuplot syntax highlighter will appear under the **SynEdit Highlighters** tab, identified by the **`plt`** glyph. 
 
@@ -159,7 +153,7 @@ See the [ExtraSyn](https://sourceforge.net/projects/lazarus-ccr/files/extrasyn/)
 
 #### RichMemo
 
-RichMemo is a third-party Lazarus component used to display output messages in ShinPlot's message terminal. It is similar to Lazarus's native Memo component but offers additional functionality. It was chosen with future development in mind because of its broader feature set.
+RichMemo is a third-party Lazarus component used to display output messages in GnuplotIDE's message terminal. It is similar to Lazarus's native Memo component but offers additional functionality. It was chosen with future development in mind because of its broader feature set.
 
 Install RichMemo through Lazarus's Online Package Manager. Rebuild the Lazarus IDE if required by the installation process. After installation, RichMemo will appear under the **Common Controls** tab in the component palette. 
 
@@ -171,13 +165,13 @@ ExtraSyn and RichMemo are required when compiling the source code that uses them
 
 #### Optional: Application Icon
 
-ShinPlot has its own logo, which can be used as the application's icon on the desktop dock.
+GnuplotIDE has its own logo, which can be used as the application's icon on the desktop dock.
 
 Displaying an icon on the desktop dock is different from embedding an icon into the binary executable, as is commonly done with Windows applications. On Linux, application icons are typically associated with desktop entries rather than embedded in the executable in a universally recognized format.
 
-To display the ShinPlot icon on the desktop dock, create a desktop entry for the application.
+To display the GnuplotIDE icon on the desktop dock, create a desktop entry for the application.
 
-Create a file named `ShinPlot.desktop` in: 
+Create a file named `gnuplotide.desktop` in: 
 
 `~/.local/share/applications/` 
 
@@ -186,10 +180,10 @@ Add the following content:
 ```
 [Desktop Entry]
 Type=Application
-Name=ShinPlot
+Name=GnuplotIDE
 Exec=/path/to/executable
 Icon=/absolute/path/to/image.png
-StartupWMClass=ShinPlot
+StartupWMClass=GnuplotIDE
 Terminal=false
 Categories=Science;
 ```
@@ -198,7 +192,7 @@ Replace the paths in Exec and Icon with the correct absolute paths on your syste
 
 For example, the icon path could be:
 
-`/home/name/.local/share/icons/hicolor/128x128/apps/ShinPlot-128.png`
+`/home/name/.local/share/icons/hicolor/128x128/apps/gnuplotide-128.png`
 
 This path points to a 128x128 PNG image stored in the user's local icon directory. 
 
@@ -207,24 +201,24 @@ This path points to a 128x128 PNG image stored in the user's local icon director
 
 Unlike document formats such as Microsoft Word's `.doc` and `.docx`, Gnuplot scripts do not require a single, specific filename extension. They are plain-text files containing Gnuplot commands, and Gnuplot can execute them regardless of their extension.
 
-By convention, ShinPlot uses `.plt` as its primary file extension and `.gp` as a secondary extension for Gnuplot scripts.
+By convention, GnuplotIDE uses `.plt` as its primary file extension and `.gp` as a secondary extension for Gnuplot scripts.
 
 #### Opening Files 
 
-ShinPlot is primarily designed for opening files from within the application after launching it. However, it also supports opening `.plt` and `.gp` files by double-clicking them or selecting them and pressing Enter.
+GnuplotIDE is primarily designed for opening files from within the application after launching it. However, it also supports opening `.plt` and `.gp` files by double-clicking them or selecting them and pressing Enter.
 
 To enable this, create a desktop entry as described in [Optional: Application Icon](#optional-application-icon) under [Installation](#installation), and add `%f` to the executable path in the Exec line. For example:
 
 ```
 Exec=/path/to/executable %f
 ``` 
-Once configured, double-clicking a `.plt` or `.gp` file, or selecting one and pressing Enter, will open the file in ShinPlot. Files with other extensions will not be opened through this method.
+Once configured, double-clicking a `.plt` or `.gp` file, or selecting one and pressing Enter, will open the file in GnuplotIDE. Files with other extensions will not be opened through this method.
 
-If ShinPlot is to be used as the default application for opening `.plt` or `.gp` files, change the file association if another application is currently set as the default.
+If GnuplotIDE is to be used as the default application for opening `.plt` or `.gp` files, change the file association if another application is currently set as the default.
 
 ## Getting Started
 
-Using ShinPlot is straightforward. ShinPlot supports three plotting modes. The preview panel contains two tabs: one for static plots and another for interactive plots.
+Using GnuplotIDE is straightforward. GnuplotIDE supports three plotting modes. The preview panel contains two tabs: one for static plots and another for interactive plots.
 
 - ![static mode](ReadMe-Icons/plot_static.png)  — Displays a static plot in PNG format (F5). 
 - ![interactive mode](ReadMe-Icons/plot_x11.png)  — Displays an interactive X11-based plot that supports mouse and keyboard interaction (F6).
@@ -273,13 +267,13 @@ splot sin(sqrt(x*x+y*y))
 
 ##### External Plot
 
-To try the External Plot mode, enter the same code used in the Isosamples example above and press the corresponding button. ShinPlot will open Gnuplot's native external Qt plotting window.
+To try the External Plot mode, enter the same code used in the Isosamples example above and press the corresponding button. GnuplotIDE will open Gnuplot's native external Qt plotting window.
 
 These three modes allow users to generate plots quickly and view them in the way that best suits their needs, whether as static images or interactive visualizations.
 
 ## Limitations
 
-Although ShinPlot is designed to be easy to use, some limitations arise from the way Gnuplot's terminals handle plotting.
+Although GnuplotIDE is designed to be easy to use, some limitations arise from the way Gnuplot's terminals handle plotting.
 
 1. ### Multiple Plots in Static Mode
 
@@ -292,9 +286,9 @@ Static plotting uses Gnuplot's pngcairo terminal, which generates only one image
    plot tan(x)
    ```
    
-In ShinPlot's static preview, only the first plot will be displayed. However, this behavior may appear different when the same commands are executed directly in a system terminal using Gnuplot's interactive prompt (`gnuplot>`). In that case, Gnuplot processes all three commands, generating and replacing the plot each time. Consequently, only the last plot remains visible.
+In GnuplotIDE's static preview, only the first plot will be displayed. However, this behavior may appear different when the same commands are executed directly in a system terminal using Gnuplot's interactive prompt (`gnuplot>`). In that case, Gnuplot processes all three commands, generating and replacing the plot each time. Consequently, only the last plot remains visible.
 
-This is not a bug in ShinPlot; it results from how the pngcairo terminal handles successive plots within the same session.
+This is not a bug in GnuplotIDE; it results from how the pngcairo terminal handles successive plots within the same session.
 
 In the interactive X11 and external Qt modes, only the last plot is displayed, as expected.
 
@@ -303,7 +297,7 @@ In the interactive X11 and external Qt modes, only the last plot is displayed, a
 The multiplot command also behaves differently in the application's static preview. For example, executing the following code in Static Plot mode will leave the other layout areas empty, displaying only the final Parabola plot.
 
 ```Gnuplot
-set multiplot layout 2,2 title "ShinPlot - Multiplot Test"
+set multiplot layout 2,2 title "GnuplotIDE - Multiplot Test"
 
 set title "Sine"
 set grid
@@ -356,9 +350,9 @@ This produces the correct multiplot layout. However, the reset command may resto
 
 3. ### No Syntax Autocompletion
 
-ShinPlot does not currently provide syntax autocompletion. Gnuplot's syntax is relatively compact, so automatic completion has not been implemented.
+GnuplotIDE does not currently provide syntax autocompletion. Gnuplot's syntax is relatively compact, so automatic completion has not been implemented.
 
-However, ShinPlot provides a convenient way to insert data-file names into scripts. Right-click inside the editor to open the context menu, then select Insert Data File. Its submenu lists the data files found in the working directory from which ShinPlot was launched.
+However, GnuplotIDE provides a convenient way to insert data-file names into scripts. Right-click inside the editor to open the context menu, then select Insert Data File. Its submenu lists the data files found in the working directory from which GnuplotIDE was launched.
 
 For a file to appear in this list, it must have the `.dat` extension (for example, `data.dat`). Files with other extensions will not appear in the submenu.
 
@@ -368,19 +362,19 @@ The interactive X11 terminal does not support antialiasing, so plots may appear 
 
 For higher-quality interactive plots, use External Plot mode, which opens Gnuplot's native Qt window. From there, users can save plots in higher-quality formats.
 
-The Qt terminal cannot be embedded into ShinPlot because its plotting area cannot be separated from the window decorations and other interface elements, such as the toolbar and buttons. Therefore, the Qt terminal opens in its own external window.
+The Qt terminal cannot be embedded into GnuplotIDE because its plotting area cannot be separated from the window decorations and other interface elements, such as the toolbar and buttons. Therefore, the Qt terminal opens in its own external window.
 
 5. ### Application Theming
 
-ShinPlot provides appearance settings for customizing the editor's background color, fonts, and Gnuplot syntax highlighting colors, as well as the Message Window's background color, text color, and fonts. However, it does not provide a dedicated application-wide theming system. The overall appearance of the application depends on the Qt 5 theme configured on the user's system. On Linux, tools such as `qt5ct` can be used to customize the appearance of Qt 5 applications.
+GnuplotIDE provides appearance settings for customizing the editor's background color, fonts, and Gnuplot syntax highlighting colors, as well as the Message Window's background color, text color, and fonts. However, it does not provide a dedicated application-wide theming system. The overall appearance of the application depends on the Qt 5 theme configured on the user's system. On Linux, tools such as `qt5ct` can be used to customize the appearance of Qt 5 applications.
 
-**Note on Icon Visibility:** ShinPlot was designed specifically for use in a dark-theme environment, which is why it uses white [Tabler Icons](https://github.com/tabler). A dark desktop theme is recommended for better icon visibility. 
+**Note on Icon Visibility:** GnuplotIDE was designed specifically for use in a dark-theme environment, which is why it uses white [Tabler Icons](https://github.com/tabler). A dark desktop theme is recommended for better icon visibility. 
 
-Alternatively, users who compile ShinPlot from source can replace the original icons with the dark-grey versions provided in `ReadMe-Icons` folder, which are intended for lighter desktop themes. The distributed binary retains the original white icons.
+Alternatively, users who compile GnuplotIDE from source can replace the original icons with the dark-grey versions provided in `ReadMe-Icons` folder, which are intended for lighter desktop themes. The distributed binary retains the original white icons.
 
 6. ### Miscellaneous
 
-ShinPlot is an independently developed project, created out of a desire to build a practical working environment for Gnuplot. It is not intended to be a perfect, all-encompassing solution or a replacement for other text editors and IDEs.
+GnuplotIDE is an independently developed project, created out of a desire to build a practical working environment for Gnuplot. It is not intended to be a perfect, all-encompassing solution or a replacement for other text editors and IDEs.
 
 
 The application was developed by a single developer, without external funding or institutional support. Like any software project, it may contain bugs, limitations, or unexpected behavior. Any further improvement or development will depend on the time and resources available.
@@ -389,7 +383,7 @@ The application was developed by a single developer, without external funding or
 
 ![GnuplotIDE Interface](Screenshots/GnuplotIDE_interface.png)
 
-The ShinPlot interface consists of four main components.
+The GnuplotIDE interface consists of four main components.
 
 1. #### Editor
 
@@ -401,7 +395,7 @@ The preview area displays static and interactive plots in separate tabs. In the 
 
 3. #### Message Window
 
-The message window displays output from both ShinPlot and Gnuplot itself, including application messages and error messages.
+The message window displays output from both GnuplotIDE and Gnuplot itself, including application messages and error messages.
 
 In addition to these messages, numerical values such as 0 and 1 may appear. These are Gnuplot's GPVAL_ERRNO values, which indicate the status of Gnuplot commands. A value of 0 indicates success, while 1 indicates an error. An error status is usually accompanied by an error message.
 
@@ -421,7 +415,7 @@ The plot-clearing commands can be useful when a plot is rendered incorrectly or 
 
 ## Static and Interactive Plot Parameters
 
-In addition to the main interface components, ShinPlot provides two parameter editors: **Static Plot Parameters** and **Interactive Plot Parameters**.
+In addition to the main interface components, GnuplotIDE provides two parameter editors: **Static Plot Parameters** and **Interactive Plot Parameters**.
 
 These editors are accessible from the **Gnuplot** menu and are not displayed in the main interface. They allow users to configure plot backgrounds, fonts, and font sizes without cluttering the main editor or repeatedly entering the same commands in their scripts.
 
@@ -444,7 +438,7 @@ set title font "DejaVu Sans,16"
 
 If you need a publication-quality plot or a plot with custom dimensions, use External Plot mode and save the plot from Gnuplot's native window, or carefully configure the commands in the main editor and specify custom output filenames.
 
-ShinPlot is designed to be flexible and generally allows users to execute Gnuplot commands directly. However, plots displayed within the application should be regarded as previews rather than necessarily final output.
+GnuplotIDE is designed to be flexible and generally allows users to execute Gnuplot commands directly. However, plots displayed within the application should be regarded as previews rather than necessarily final output.
 
 Plot parameters, such as plot background colors and fonts, are not saved as permanent application settings. Instead, they belong to the current Gnuplot session and are reset when the session ends. This differs from application settings, such as the editor's font and background color, which are managed separately.
 
@@ -464,37 +458,37 @@ Interactive plots and external plots are also affected by the dimensions of thei
 
 ## Logs
 
-ShinPlot does not generate general-purpose logs. However, it creates one specific temporary log file named **SizeCheckLog.txt**. This file is generated in the directory from which the application was launched and is deleted when the application closes.
+GnuplotIDE does not generate general-purpose logs. However, it creates one specific temporary log file named **SizeCheckLog.txt**. This file is generated in the directory from which the application was launched and is deleted when the application closes.
 
-The file records comparisons of the static plot file's size. ShinPlot uses these comparisons internally to determine whether plot generation is complete. If a static plot is rendered incorrectly or appears incomplete, this log file can be inspected while the application is running.
+The file records comparisons of the static plot file's size. GnuplotIDE uses these comparisons internally to determine whether plot generation is complete. If a static plot is rendered incorrectly or appears incomplete, this log file can be inspected while the application is running.
 
 The file may contain several lines of size comparisons for each plot. Usually, the last line for a particular plot should show equal sizes, such as **Size1 = 130417 Size2 = 130417**. This indicates that the generation of that plot is considered complete and that the plot should render correctly. If the sizes differ, something may have gone wrong during plot generation.
 
 ## Contributing
 
-The current version of ShinPlot is designed for Linux. It was developed on Fedora 43 using Lazarus 4.8 with the Qt widget set, and tested with Gnuplot 6.0.3. 
+The current version of GnuplotIDE is designed for Linux. It was developed on Fedora 43 using Lazarus 4.8 with the Qt widget set, and tested with Gnuplot 6.0.3. 
 
-Developers interested in porting ShinPlot to Windows or macOS are encouraged to do so. Such independent ports would make the application accessible to users of other operating systems.
+Developers interested in porting GnuplotIDE to Windows or macOS are encouraged to do so. Such independent ports would make the application accessible to users of other operating systems.
 
 ## Acknowledgements
 
-ShinPlot was developed using the Lazarus IDE and Free Pascal Compiler (FPC), with Free Pascal as its programming language.
+GnuplotIDE was developed using the Lazarus IDE and Free Pascal Compiler (FPC), with Free Pascal as its programming language.
 
 Packages such as ExtraSyn and RichMemo have become indispensable parts of the application. I am grateful to their creators and maintainers for their valuable work.
 
-The icons used in ShinPlot are from [Tabler Icons](https://github.com/tabler), an open-source icon library. Thanks to the Tabler team and contributors for making these icons available.
+The icons used in GnuplotIDE are from [Tabler Icons](https://github.com/tabler), an open-source icon library. Thanks to the Tabler team and contributors for making these icons available.
 
-Special thanks go to **Tito Hinostroza (t-edson)** and **Ronald Chastain (rchastain)**, contributors to [UnTerminal](https://github.com/t-edson/UnTerminal), for making this library available. ShinPlot uses the `UnTerminal.pas` and `TermVT.pas` source files from the project, which is licensed under the GNU Lesser General Public License version 2.1 (LGPL-2.1).
+Special thanks go to **Tito Hinostroza (t-edson)** and **Ronald Chastain (rchastain)**, contributors to [UnTerminal](https://github.com/t-edson/UnTerminal), for making this library available. GnuplotIDE uses the `UnTerminal.pas` and `TermVT.pas` source files from the project, which is licensed under the GNU Lesser General Public License version 2.1 (LGPL-2.1).
 
 I would also like to thank Tito Hinostroza for his book, [*The SynEdit Bible*](https://github.com/t-edson/La-Biblia-del-Synedit), which provided useful code and guidance during development.
 
-I am grateful to all the creators and contributors whose work helped make ShinPlot possible.
+I am grateful to all the creators and contributors whose work helped make GnuplotIDE possible.
 - [The SynEdit Bible](https://github.com/t-edson/La-Biblia-del-Synedit) — CC0 1.0 Universal.
 
 ## License
 
-ShinPlot is licensed under the GNU General Public License v3.0 only (GPL-3.0-only).
+GnuplotIDE is licensed under the GNU General Public License v3.0 only (GPL-3.0-only).
 
 See the [LICENSE](LICENSE) file for the full licence text.
 
-Some third-party components included in ShinPlot are distributed under their own licences. Please refer to the relevant copyright and licence notices for details.
+Some third-party components included in GnuplotIDE are distributed under their own licences. Please refer to the relevant copyright and licence notices for details.
